@@ -1,0 +1,28 @@
+# Fichiers Python compilés
+__pycache__/
+*.py[cod]
+
+# Environnements virtuels
+venv/
+env/
+ENV/
+
+# Fichiers de configuration IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Fichiers de logs
+*.log
+
+# Base de données SQLite
+db.sqlite3
+
+# Secrets et fichiers sensibles
+*.env
+.env
+
+# Fichiers système
+.DS_Store
+Thumbs.db

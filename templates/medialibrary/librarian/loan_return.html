@@ -1,0 +1,15 @@
+{% extends 'medialibrary/base.html' %}
+
+{% block title %}Retour d'emprunt{% endblock %}
+
+{% block content %}
+    <h2>Enregistrer le retour</h2>
+    
+    <p>Confirmez le retour de <strong>{{ loan.media }}</strong> emprunté par <strong>{{ loan.member }}</strong>.</p>
+    
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirmer le retour</button>
+        <a href="{% url 'loan_list' %}">Annuler</a>
+    </form>
+{% endblock %}

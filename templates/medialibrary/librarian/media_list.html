@@ -1,0 +1,56 @@
+{% extends 'medialibrary/base.html' %}
+
+{% block title %}Gestion des médias{% endblock %}
+
+{% block content %}
+    <h2>Gestion du catalogue</h2>
+
+    <div class="media-actions">
+        <a href="{% url 'media_create' media_type='book' %}" class="btn">Ajouter un livre</a>
+        <a href="{% url 'media_create' media_type='cd' %}" class="btn">Ajouter un CD</a>
+        <a href="{% url 'media_create' media_type='dvd' %}" class="btn">Ajouter un DVD</a>
+        <a href="{% url 'media_create' media_type='boardgame' %}" class="btn">Ajouter un jeu</a>
+    </div>
+
+    {% for media_type, items in media.items %}
+        <section class="media-section">
+            <h3>{{ media_type|capfirst }}</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Titre</th>
+                        <th>Auteur</th>
+                        <th>Année</th>
+                        <th>Disponibilité</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                        <tr>
+                            <td>{{ item.title }}</td>
+                            <td>{{ item.author }}</td>
+                            <td>{{ item.publication_date.year }}</td>
+                            <td>
+                                {% if item.available %}
+                                    <span class="status-ok">Disponible</span>
+                                {% else %}
+                                    <span class="status-warning">Emprunté</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <a href="#">Modifier</a>
+                                <a href="#">Supprimer</a>
+                            </td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="5">Aucun {{ media_type }} enregistré</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    {% endfor %}
+{% endblock %}

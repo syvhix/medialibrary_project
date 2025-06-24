@@ -1,0 +1,14 @@
+{% extends 'medialibrary/base.html' %}
+
+{% block title %}Ajouter un {{ media_type }}{% endblock %}
+
+{% block content %}
+    <h2>Ajouter un {{ media_type }}</h2>
+    
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enregistrer</button>
+        <a href="{% url 'media_list' %}">Annuler</a>
+    </form>
+{% endblock %}

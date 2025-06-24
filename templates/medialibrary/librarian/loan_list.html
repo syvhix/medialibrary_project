@@ -1,0 +1,189 @@
+{% extends 'medialibrary/base.html' %}
+
+{% block title %}Gestion des emprunts{% endblock %}
+
+{% block content %}
+    <h2>Gestion des emprunts</h2>
+
+    <div class="loan-sections">
+        <!-- Emprunts actifs -->
+        <section class="loan-section">
+            <h3>Emprunts en cours ({{ active.count }})</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Média</th>
+                        <th>Membre</th>
+                        <th>Date emprunt</th>
+                        <th>Retour prévu</th>
+                        <th>Jours restants</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for loan in active %}
+                        <tr class="{% if loan.is_overdue %}overdue{% endif %}">
+                            <td>{{ loan.media }}</td>
+                            <td>{{ loan.member.user.get_full_name }}</td>
+                            <td>{{ loan.loan_date|date:"d/m/Y" }}</td>
+                            <td>{{ loan.due_date|date:"d/m/Y" }}</td>
+                            <td>
+                                {% if loan.is_overdue %}
+                                    <span class="status-danger">En retard ({{ loan.days_overdue }} jour{{ loan.days_overdue|pluralize }})</span>
+                                {% else %}
+                                    <span class="status-ok">{{ loan.days_remaining }} jour{{ loan.days_remaining|pluralize }}</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <a href="{% url 'loan_return' loan.pk %}" class="btn-return">Enregistrer retour</a>
+                            </td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="6" class="empty">Aucun emprunt actif</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Emprunts en retard -->
+        <section class="loan-section">
+            <h3>Retards ({{ overdue.count }})</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Média</th>
+                        <th>Membre</th>
+                        <th>Retour prévu</th>
+                        <th>Jours de retard</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for loan in overdue %}
+                        <tr class="overdue">
+                            <td>{{ loan.media }}</td>
+                            <td>{{ loan.member.user.get_full_name }}</td>
+                            <td>{{ loan.due_date|date:"d/m/Y" }}</td>
+                            <td>{{ loan.days_overdue }} jour{{ loan.days_overdue|pluralize }}</td>
+                            <td>
+                                <a href="{% url 'loan_return' loan.pk %}" class="btn-return">Enregistrer retour</a>
+                                <a href="mailto:{{ loan.member.user.email }}?subject=Retard emprunt" class="btn-email">Rappeler</a>
+                            </td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="5" class="empty">Aucun retard</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Historique -->
+        <section class="loan-section">
+            <h3>Historique ({{ completed.count }})</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Média</th>
+                        <th>Membre</th>
+                        <th>Date emprunt</th>
+                        <th>Date retour</th>
+                        <th>Statut</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for loan in completed %}
+                        <tr>
+                            <td>{{ loan.media }}</td>
+                            <td>{{ loan.member.user.get_full_name }}</td>
+                            <td>{{ loan.loan_date|date:"d/m/Y" }}</td>
+                            <td>{{ loan.return_date|date:"d/m/Y" }}</td>
+                            <td>
+                                {% if loan.was_returned_late %}
+                                    <span class="status-warning">Retardé (+{{ loan.days_late }} jour{{ loan.days_late|pluralize }})</span>
+                                {% else %}
+                                    <span class="status-ok">À temps</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="5" class="empty">Aucun emprunt archivé</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <div class="actions">
+        <a href="{% url 'loan_create' %}" class="btn btn-primary">Nouvel emprunt</a>
+    </div>
+
+    <style>
+        .loan-sections {
+            margin-bottom: 2rem;
+        }
+        .loan-section {
+            margin-bottom: 3rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+        .overdue {
+            background-color: #fff3f3;
+        }
+        .status-ok {
+            color: #28a745;
+        }
+        .status-warning {
+            color: #ffc107;
+        }
+        .status-danger {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .empty {
+            text-align: center;
+            color: #6c757d;
+            font-style: italic;
+        }
+        .btn-return {
+            color: #fff;
+            background-color: #17a2b8;
+            padding: 5px 10px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        .btn-email {
+            color: #fff;
+            background-color: #6c757d;
+            padding: 5px 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+        .btn-primary {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+    </style>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'medialibrary/base.html' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+    <h2>Bienvenue à la médiathèque</h2>
+    
+    {% if user.is_authenticated %}
+        {% if user.is_staff %}
+            <p>Vous êtes connecté en tant que <strong>bibliothécaire</strong>.</p>
+            <a href="{% url 'librarian_dashboard' %}">Accéder au tableau de bord</a>
+        {% else %}
+            <p>Vous êtes connecté en tant que <strong>membre</strong>.</p>
+            <a href="{% url 'member_media_list' %}">Consulter le catalogue</a>
+        {% endif %}
+    {% else %}
+        <p>Veuillez vous connecter pour accéder aux services.</p>
+        <a href="{% url 'login' %}">Connexion</a>
+    {% endif %}
+{% endblock %}

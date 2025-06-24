@@ -1,0 +1,65 @@
+{% extends 'medialibrary/base.html' %}
+
+{% block title %}Catalogue des médias{% endblock %}
+
+{% block content %}
+    <h2>Catalogue complet</h2>
+
+    <div class="media-categories">
+        <section class="category">
+            <h3>Livres</h3>
+            <ul>
+                {% for book in books %}
+                    <li>
+                        <strong>{{ book.title }}</strong> - {{ book.author }}
+                        <span>({{ book.publication_date.year }}, {{ book.page_count }} pages)</span>
+                    </li>
+                {% empty %}
+                    <li>Aucun livre disponible</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section class="category">
+            <h3>CDs</h3>
+            <ul>
+                {% for cd in cds %}
+                    <li>
+                        <strong>{{ cd.title }}</strong> - {{ cd.author }}
+                        <span>({{ cd.track_count }} pistes, {{ cd.duration }} min)</span>
+                    </li>
+                {% empty %}
+                    <li>Aucun CD disponible</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section class="category">
+            <h3>DVDs</h3>
+            <ul>
+                {% for dvd in dvds %}
+                    <li>
+                        <strong>{{ dvd.title }}</strong> - {{ dvd.author }}
+                        <span>({{ dvd.duration }} min, format {{ dvd.video_format }})</span>
+                    </li>
+                {% empty %}
+                    <li>Aucun DVD disponible</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section class="category">
+            <h3>Jeux de plateau</h3>
+            <ul>
+                {% for game in boardgames %}
+                    <li>
+                        <strong>{{ game.title }}</strong>
+                        <span>({{ game.min_players }}-{{ game.max_players }} joueurs, {{ game.duration }} min)</span>
+                    </li>
+                {% empty %}
+                    <li>Aucun jeu disponible</li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
+{% endblock %}

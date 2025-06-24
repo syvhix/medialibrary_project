@@ -1,0 +1,32 @@
+{% extends 'medialibrary/base.html' %}
+
+{% block title %}Tableau de bord{% endblock %}
+
+{% block content %}
+    <h2>Tableau de bord - Bibliothécaire</h2>
+
+    <div class="stats">
+        <div class="stat-card">
+            <h3>Membres inscrits</h3>
+            <p>{{ stats.members }}</p>
+        </div>
+        <div class="stat-card">
+            <h3>Médias disponibles</h3>
+            <p>{{ stats.media }}</p>
+        </div>
+        <div class="stat-card">
+            <h3>Emprunts en cours</h3>
+            <p>{{ stats.active_loans }}</p>
+        </div>
+        <div class="stat-card">
+            <h3>Retards</h3>
+            <p>{{ stats.overdue_loans }}</p>
+        </div>
+    </div>
+
+    <div class="quick-actions">
+        <a href="{% url 'member_create' %}" class="btn">Ajouter un membre</a>
+        <a href="{% url 'media_list' %}" class="btn">Gérer les médias</a>
+        <a href="{% url 'loan_list' %}" class="btn">Voir les emprunts</a>
+    </div>
+{% endblock %}

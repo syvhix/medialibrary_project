@@ -1,0 +1,44 @@
+{% extends 'medialibrary/base.html' %}
+
+{% block title %}Gestion des membres{% endblock %}
+
+{% block content %}
+    <h2>Liste des membres</h2>
+    
+    <a href="{% url 'member_create' %}" class="btn">Ajouter un membre</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Téléphone</th>
+                <th>Statut</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for member in members %}
+                <tr>
+                    <td>{{ member.user.get_full_name }}</td>
+                    <td>{{ member.user.email }}</td>
+                    <td>{{ member.phone }}</td>
+                    <td>
+                        {% if member.can_borrow %}
+                            <span class="status-ok">Actif</span>
+                        {% else %}
+                            <span class="status-warning">Bloqué</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="{% url 'member_update' member.pk %}">Modifier</a>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="5">Aucun membre enregistré</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
