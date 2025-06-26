@@ -28,7 +28,7 @@ INSTALLED_APPS = [
 
 AUTH_USER_MODEL = 'auth.User'
 
-LOGIN_URL = '/connexion/'
+LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 

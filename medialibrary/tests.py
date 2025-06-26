@@ -76,6 +76,7 @@ class MemberModelTest(TestCase):
             due_date=date.today() - timedelta(days=1))
 
         self.member.update_borrow_status()
+        self.member.refresh_from_db()
         self.assertFalse(self.member.can_borrow)
 
         # Retour du livre
@@ -152,7 +153,7 @@ class LoanModelTest(TestCase):
             author="Test Author",
             publication_date=date.today(),
             media_type="BOOK",
-            isbn="1234567894",
+            isbn=f"999999999{i}", 
             page_count=100
         )
         loan = Loan(media=book, member=self.member)
@@ -197,7 +198,7 @@ class ViewTests(TestCase):
         # Test avec membre normal
         self.client.login(username="testuser", password="12345")
         response = self.client.get('/librarian/')
-        self.assertEqual(response.status_code, 403)
+        self.assertRedirects(response, '/accounts/login/?next=/librarian/')
 
         # Test avec bibliothécaire
         admin = User.objects.create_superuser(username="admin", password="admin")
