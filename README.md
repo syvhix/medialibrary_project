@@ -28,6 +28,7 @@ Projet Django permettant la gestion d’une médiathèque numérique avec rôles
 
 - Fichier `tests.py` avec tests de base.
 - Logs d'accès et d'erreurs pour le suivi comportemental.
+- Test à lancer manuellement avec la commande "python manage.py test".
 
 ---
 
