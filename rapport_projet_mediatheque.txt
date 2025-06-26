@@ -1,0 +1,50 @@
+
+✅ Projet Médiathèque – Rapport de Développement
+
+🔧 1. Étude et correctifs du code fourni
+
+Le code initial présentait plusieurs problèmes corrigés lors du développement :
+- Absence ou mauvaise configuration des vues pour la connexion/déconnexion (`login`, `logout`).
+- Redirections incomplètes ou inexistantes après connexion.
+- Absence de certains `urlpattern` dans `urls.py`.
+
+Des ajustements ont été apportés pour assurer une navigation fonctionnelle et fluide.
+
+⚙️ 2. Mise en place des fonctionnalités demandées
+
+Les fonctionnalités principales ont été mises en œuvre :
+- Authentification (connexion/déconnexion) avec redirection conditionnelle selon le type d’utilisateur.
+- Affichage conditionnel du menu selon si l’utilisateur est connecté et son rôle.
+- Gestion complète des emprunts :
+  - Création automatique de la date de retour.
+  - Blocage des emprunts pour les membres en retard.
+  - Limite du nombre de prêts à 3.
+- Différents types de médias (Livre, CD, Jeu de société) avec champs spécifiques.
+- Interface séparée membre / bibliothécaire.
+
+🧪 3. Stratégie de tests
+
+Des tests unitaires ont été réalisés à l’aide de `TestCase` de Django :
+
+- Tests de modèles :
+  - Création et affichage des différents types de médias.
+  - Comportement de l’emprunt (retour, limitation, indisponibilité).
+  - Vérification du statut `can_borrow` des membres.
+
+- Tests de vues :
+  - Accès restreint aux vues selon le rôle de l’utilisateur.
+  - Redirections correctes.
+  - Présence des données attendues dans les pages.
+
+> Voir `tests.py` pour l’ensemble des cas couverts.
+
+🗃️ 4. Base de données de test
+
+Une base de données de développement a été utilisée avec :
+- Plusieurs utilisateurs :
+  - 1 bibliothécaire (`is_staff=True`)
+  - 1 membre standard
+- Des médias pré-remplis (livres, CD, jeux)
+- Des emprunts simulés pour tester le retour, le retard, et les limites
+
+> Des fixtures ou la méthode `setUp()` des tests permettent de reproduire ces cas automatiquement.
