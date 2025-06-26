@@ -16,9 +16,6 @@ ENV/
 # Fichiers de logs
 *.log
 
-# Base de données SQLite
-db.sqlite3
-
 # Secrets et fichiers sensibles
 *.env
 .env

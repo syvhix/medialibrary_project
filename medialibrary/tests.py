@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from .models import Member, Book, CD, BoardGame, Loan
 from datetime import date, timedelta
 from django.core.exceptions import ValidationError
+from django.conf import settings
 
 
 class MediaModelTest(TestCase):
@@ -61,11 +62,11 @@ class MemberModelTest(TestCase):
 
     def test_borrow_status(self):
         book = Book.objects.create(
-            title="Test Book",
+            title="Borrow Test Book",
             author="Test Author",
             publication_date=date.today(),
             media_type="BOOK",
-            isbn="1234567890",
+            isbn="9876543210",
             page_count=100
         )
 
@@ -84,6 +85,7 @@ class MemberModelTest(TestCase):
         loan.return_date = date.today()
         loan.save()
 
+        self.member.update_borrow_status()
         self.member.refresh_from_db()
         self.assertTrue(self.member.can_borrow)
 
@@ -139,7 +141,7 @@ class LoanModelTest(TestCase):
                 author="Test Author",
                 publication_date=date.today(),
                 media_type="BOOK",
-                isbn=f"123456789{i}",
+                isbn=f"1234567890{i}",
                 page_count=100
             )
             Loan.objects.create(
@@ -153,7 +155,7 @@ class LoanModelTest(TestCase):
             author="Test Author",
             publication_date=date.today(),
             media_type="BOOK",
-            isbn=f"999999999{i}", 
+            isbn=f"1234567890{i + 1}",
             page_count=100
         )
         loan = Loan(media=book, member=self.member)
@@ -198,7 +200,7 @@ class ViewTests(TestCase):
         # Test avec membre normal
         self.client.login(username="testuser", password="12345")
         response = self.client.get('/librarian/')
-        self.assertRedirects(response, '/accounts/login/?next=/librarian/')
+        self.assertRedirects(response, f"{settings.LOGIN_URL}?next=/librarian/")
 
         # Test avec bibliothécaire
         admin = User.objects.create_superuser(username="admin", password="admin")
