@@ -1,0 +1,948 @@
+[INFO] 2025-06-24 01:31:46,580 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 01:31:53,400 views - Page d'accueil visitée
+[INFO] 2025-06-24 01:31:53,425 basehttp - "GET / HTTP/1.1" 200 1205
+[WARNING] 2025-06-24 01:31:53,537 log - Not Found: /favicon.ico
+[WARNING] 2025-06-24 01:31:53,537 basehttp - "GET /favicon.ico HTTP/1.1" 404 5259
+[INFO] 2025-06-24 01:31:56,185 basehttp - "GET /librarian/ HTTP/1.1" 200 1751
+[INFO] 2025-06-24 01:31:57,955 basehttp - "GET /librarian/loans/ HTTP/1.1" 200 5259
+[INFO] 2025-06-24 01:32:01,018 basehttp - "GET /member/media/ HTTP/1.1" 200 2002
+[INFO] 2025-06-24 01:32:02,001 basehttp - "GET /librarian/ HTTP/1.1" 200 1751
+[INFO] 2025-06-24 01:32:03,596 basehttp - "GET /librarian/media/ HTTP/1.1" 200 1392
+[INFO] 2025-06-24 01:32:05,303 basehttp - "GET /librarian/ HTTP/1.1" 200 1751
+[INFO] 2025-06-24 01:32:06,138 basehttp - "GET /librarian/members/create/ HTTP/1.1" 200 2373
+[INFO] 2025-06-24 01:32:10,029 basehttp - "GET /librarian/members/ HTTP/1.1" 200 2332
+[INFO] 2025-06-24 01:32:30,968 autoreload - C:\Users\FlowUp\OneDrive\Desktop\medialibrary\medialibrary\views.py changed, reloading.
+[INFO] 2025-06-24 01:32:31,357 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 01:32:41,767 autoreload - C:\Users\FlowUp\OneDrive\Desktop\medialibrary\medialibrary_project\settings.py changed, reloading.
+[INFO] 2025-06-24 02:15:45,034 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 02:16:02,684 basehttp - "GET / HTTP/1.1" 200 1205
+[WARNING] 2025-06-24 02:16:02,801 log - Not Found: /favicon.ico
+[WARNING] 2025-06-24 02:16:02,801 basehttp - "GET /favicon.ico HTTP/1.1" 404 5259
+[INFO] 2025-06-24 02:30:40,734 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 02:30:42,126 basehttp - "GET / HTTP/1.1" 200 1205
+[INFO] 2025-06-24 02:30:52,049 basehttp - "GET /admin/ HTTP/1.1" 200 11360
+[INFO] 2025-06-24 02:30:52,056 basehttp - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[INFO] 2025-06-24 02:30:52,056 basehttp - "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[INFO] 2025-06-24 02:30:52,057 basehttp - "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[INFO] 2025-06-24 02:30:52,078 basehttp - "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[INFO] 2025-06-24 02:30:52,078 basehttp - "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[INFO] 2025-06-24 02:30:52,079 basehttp - "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[INFO] 2025-06-24 02:30:52,081 basehttp - "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[INFO] 2025-06-24 02:30:52,085 basehttp - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[INFO] 2025-06-24 02:30:52,085 basehttp - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[INFO] 2025-06-24 02:30:59,541 basehttp - "POST /admin/logout/ HTTP/1.1" 302 0
+[ERROR] 2025-06-24 02:30:59,628 log - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\medialibrary\views.py", line 19, in home
+    return render(request, 'medialibrary/home.html')
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+[ERROR] 2025-06-24 02:30:59,632 basehttp - "GET / HTTP/1.1" 500 148250
+[INFO] 2025-06-24 02:31:03,309 basehttp - "GET /admin/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 02:31:03,319 basehttp - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4173
+[INFO] 2025-06-24 02:31:03,368 basehttp - "GET /static/admin/css/login.css HTTP/1.1" 304 0
+[INFO] 2025-06-24 02:31:11,880 basehttp - "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 02:31:11,887 basehttp - "GET /admin/ HTTP/1.1" 200 11360
+[INFO] 2025-06-24 02:31:14,284 basehttp - "GET /admin/password_change/ HTTP/1.1" 200 10520
+[INFO] 2025-06-24 02:31:14,299 basehttp - "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[INFO] 2025-06-24 02:31:14,327 basehttp - "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[INFO] 2025-06-24 02:31:38,462 basehttp - "POST /admin/password_change/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 02:31:38,477 basehttp - "GET /admin/password_change/done/ HTTP/1.1" 200 8714
+[INFO] 2025-06-24 02:44:14,705 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 02:44:16,190 basehttp - "GET / HTTP/1.1" 200 1257
+[INFO] 2025-06-24 02:44:19,410 basehttp - "GET / HTTP/1.1" 200 1257
+[INFO] 2025-06-24 02:44:20,554 basehttp - "GET /logout/ HTTP/1.1" 302 0
+[ERROR] 2025-06-24 02:44:20,580 log - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\medialibrary\views.py", line 20, in home
+    return render(request, 'medialibrary/home.html')
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+[ERROR] 2025-06-24 02:44:20,583 basehttp - "GET / HTTP/1.1" 500 148291
+[ERROR] 2025-06-24 02:45:18,777 log - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\medialibrary\views.py", line 20, in home
+    return render(request, 'medialibrary/home.html')
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+[ERROR] 2025-06-24 02:45:18,780 basehttp - "GET / HTTP/1.1" 500 148428
+[INFO] 2025-06-24 02:45:21,454 basehttp - "GET /admin/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 02:45:21,466 basehttp - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4173
+[INFO] 2025-06-24 02:45:34,442 basehttp - "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 02:45:34,453 basehttp - "GET /admin/ HTTP/1.1" 200 11360
+[INFO] 2025-06-24 02:46:06,458 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 02:46:07,666 basehttp - "GET / HTTP/1.1" 200 1257
+[INFO] 2025-06-24 02:46:16,307 basehttp - "GET /librarian/ HTTP/1.1" 200 1803
+[INFO] 2025-06-24 13:47:59,254 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 13:48:01,196 basehttp - "GET / HTTP/1.1" 200 1257
+[WARNING] 2025-06-24 13:48:01,304 log - Not Found: /favicon.ico
+[WARNING] 2025-06-24 13:48:01,304 basehttp - "GET /favicon.ico HTTP/1.1" 404 5514
+[INFO] 2025-06-24 13:48:03,920 basehttp - "GET /logout/ HTTP/1.1" 302 0
+[ERROR] 2025-06-24 13:48:04,050 log - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\medialibrary\views.py", line 20, in home
+    return render(request, 'medialibrary/home.html')
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+[ERROR] 2025-06-24 13:48:04,054 basehttp - "GET / HTTP/1.1" 500 148975
+[INFO] 2025-06-24 13:51:06,366 autoreload - C:\Users\FlowUp\OneDrive\Desktop\medialibrary\medialibrary_project\urls.py changed, reloading.
+[INFO] 2025-06-24 13:51:06,762 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 13:51:15,242 autoreload - C:\Users\FlowUp\OneDrive\Desktop\medialibrary\medialibrary_project\urls.py changed, reloading.
+[INFO] 2025-06-24 13:51:15,601 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 13:51:42,546 autoreload - C:\Users\FlowUp\OneDrive\Desktop\medialibrary\medialibrary_project\urls.py changed, reloading.
+[INFO] 2025-06-24 13:51:42,928 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 13:51:51,097 basehttp - "GET / HTTP/1.1" 200 1032
+[ERROR] 2025-06-24 13:51:54,500 log - Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+[ERROR] 2025-06-24 13:51:54,503 basehttp - "GET /login/ HTTP/1.1" 500 128913
+[ERROR] 2025-06-24 13:51:57,815 log - Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+[ERROR] 2025-06-24 13:51:57,817 basehttp - "GET /login/ HTTP/1.1" 500 129050
+[ERROR] 2025-06-24 13:51:58,445 log - Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+[ERROR] 2025-06-24 13:51:58,447 basehttp - "GET /login/ HTTP/1.1" 500 129050
+[INFO] 2025-06-24 13:52:19,415 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 13:52:20,949 basehttp - "GET / HTTP/1.1" 200 1032
+[ERROR] 2025-06-24 13:52:27,151 log - Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+[ERROR] 2025-06-24 13:52:27,153 basehttp - "GET /login/ HTTP/1.1" 500 128913
+[INFO] 2025-06-24 13:56:22,949 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 13:56:23,923 basehttp - "GET / HTTP/1.1" 200 1032
+[ERROR] 2025-06-24 13:56:25,599 log - Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+[ERROR] 2025-06-24 13:56:25,601 basehttp - "GET /login/ HTTP/1.1" 500 128913
+[INFO] 2025-06-24 14:03:20,721 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 14:03:21,689 basehttp - "GET / HTTP/1.1" 200 1032
+[ERROR] 2025-06-24 14:03:23,590 log - Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+[ERROR] 2025-06-24 14:03:23,593 basehttp - "GET /login/ HTTP/1.1" 500 128324
+[ERROR] 2025-06-24 14:03:25,298 log - Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+[ERROR] 2025-06-24 14:03:25,300 basehttp - "GET /login/ HTTP/1.1" 500 128461
+[INFO] 2025-06-24 14:03:48,931 autoreload - C:\Users\FlowUp\OneDrive\Desktop\medialibrary\medialibrary_project\settings.py changed, reloading.
+[INFO] 2025-06-24 14:03:49,319 autoreload - Watching for file changes with StatReloader
+[ERROR] 2025-06-24 14:03:50,491 log - Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+[ERROR] 2025-06-24 14:03:50,495 basehttp - "GET /login/ HTTP/1.1" 500 129050
+[INFO] 2025-06-24 14:06:39,472 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 14:06:40,316 basehttp - "GET / HTTP/1.1" 200 1032
+[INFO] 2025-06-24 14:06:42,153 basehttp - "GET /login/ HTTP/1.1" 200 1487
+[INFO] 2025-06-24 14:06:48,215 basehttp - "POST /login/ HTTP/1.1" 302 0
+[WARNING] 2025-06-24 14:06:48,228 log - Not Found: /bibliothecaire/
+[WARNING] 2025-06-24 14:06:48,228 basehttp - "GET /bibliothecaire/ HTTP/1.1" 404 5689
+[INFO] 2025-06-24 14:06:58,576 basehttp - "GET /login/ HTTP/1.1" 200 1649
+[INFO] 2025-06-24 14:08:21,042 autoreload - C:\Users\FlowUp\OneDrive\Desktop\medialibrary\medialibrary_project\settings.py changed, reloading.
+[INFO] 2025-06-24 14:08:21,392 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 14:08:37,924 basehttp - "POST /login/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 14:08:37,931 basehttp - "GET / HTTP/1.1" 200 1257
+[INFO] 2025-06-24 14:08:41,951 basehttp - "GET /librarian/ HTTP/1.1" 200 1803
+[INFO] 2025-06-24 14:08:43,803 basehttp - "GET /logout/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 14:08:43,806 basehttp - "GET / HTTP/1.1" 200 1032
+[INFO] 2025-06-24 14:08:44,769 basehttp - "GET /login/ HTTP/1.1" 200 1487
+[INFO] 2025-06-24 14:08:45,913 basehttp - "POST /login/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 14:08:45,917 basehttp - "GET / HTTP/1.1" 200 1257
+[INFO] 2025-06-24 14:08:47,128 basehttp - "GET /librarian/ HTTP/1.1" 200 1803
+[INFO] 2025-06-24 14:10:08,282 autoreload - C:\Users\FlowUp\OneDrive\Desktop\medialibrary\medialibrary\views.py changed, reloading.
+[INFO] 2025-06-24 14:10:08,645 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 14:10:25,387 autoreload - C:\Users\FlowUp\OneDrive\Desktop\medialibrary\medialibrary\views.py changed, reloading.
+[INFO] 2025-06-24 14:10:25,747 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 14:10:59,004 autoreload - C:\Users\FlowUp\OneDrive\Desktop\medialibrary\medialibrary\views.py changed, reloading.
+[INFO] 2025-06-24 14:10:59,363 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 14:11:30,566 autoreload - C:\Users\FlowUp\OneDrive\Desktop\medialibrary\medialibrary\views.py changed, reloading.
+[INFO] 2025-06-24 14:11:30,906 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 14:12:04,152 autoreload - C:\Users\FlowUp\OneDrive\Desktop\medialibrary\medialibrary_project\urls.py changed, reloading.
+[INFO] 2025-06-24 14:12:04,510 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 14:12:10,908 autoreload - C:\Users\FlowUp\OneDrive\Desktop\medialibrary\medialibrary\urls.py changed, reloading.
+[INFO] 2025-06-24 14:12:11,242 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 14:12:34,191 autoreload - C:\Users\FlowUp\OneDrive\Desktop\medialibrary\medialibrary\urls.py changed, reloading.
+[INFO] 2025-06-24 14:12:34,532 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 14:13:09,833 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 14:13:10,932 basehttp - "GET / HTTP/1.1" 200 1257
+[INFO] 2025-06-24 14:13:13,393 basehttp - "GET /logout/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 14:13:13,396 basehttp - "GET / HTTP/1.1" 200 1032
+[INFO] 2025-06-24 14:13:14,419 basehttp - "GET /login/ HTTP/1.1" 200 1487
+[INFO] 2025-06-24 14:13:16,236 basehttp - "POST /login/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 14:13:16,244 basehttp - "GET /librarian/ HTTP/1.1" 200 1803
+[INFO] 2025-06-24 14:13:22,152 basehttp - "GET /admin/ HTTP/1.1" 200 11360
+[INFO] 2025-06-24 14:13:22,159 basehttp - "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:22,159 basehttp - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:22,159 basehttp - "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:22,177 basehttp - "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:22,178 basehttp - "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:22,178 basehttp - "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:22,179 basehttp - "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:22,183 basehttp - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:22,183 basehttp - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:29,838 basehttp - "GET /admin/auth/user/add/ HTTP/1.1" 200 15091
+[INFO] 2025-06-24 14:13:29,850 basehttp - "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:29,852 basehttp - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:29,852 basehttp - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:29,853 basehttp - "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:29,853 basehttp - "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:29,855 basehttp - "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:29,855 basehttp - "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:29,855 basehttp - "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:29,856 basehttp - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:29,856 basehttp - "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:29,871 basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-06-24 14:13:29,875 basehttp - "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:29,876 basehttp - "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:29,881 basehttp - "GET /static/admin/css/unusable_password_field.css HTTP/1.1" 200 663
+[INFO] 2025-06-24 14:13:29,899 basehttp - "GET /static/admin/js/unusable_password_field.js HTTP/1.1" 200 1480
+[INFO] 2025-06-24 14:13:40,071 basehttp - "GET /admin/ HTTP/1.1" 200 11360
+[INFO] 2025-06-24 14:13:46,264 basehttp - "GET /admin/auth/user/2/change/ HTTP/1.1" 200 26267
+[INFO] 2025-06-24 14:13:46,276 basehttp - "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:46,276 basehttp - "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:46,277 basehttp - "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:46,277 basehttp - "GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:46,278 basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-06-24 14:13:46,336 basehttp - "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:46,336 basehttp - "GET /static/admin/img/selector-icons.svg HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:46,336 basehttp - "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:13:46,342 basehttp - "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[INFO] 2025-06-24 14:13:49,457 basehttp - "GET /admin/auth/user/2/password/ HTTP/1.1" 200 11210
+[INFO] 2025-06-24 14:14:09,338 basehttp - "POST /admin/auth/user/2/password/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 14:14:09,354 basehttp - "GET /admin/auth/user/2/change/ HTTP/1.1" 200 26640
+[INFO] 2025-06-24 14:14:09,411 basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-06-24 14:14:09,457 basehttp - "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:15:16,483 basehttp - "GET /admin/auth/user/2/password/ HTTP/1.1" 200 11994
+[INFO] 2025-06-24 14:15:26,489 basehttp - "GET /static/admin/img/icon-alert.svg HTTP/1.1" 200 504
+[INFO] 2025-06-24 14:15:46,510 basehttp - "POST /admin/auth/user/2/password/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 14:15:46,525 basehttp - "GET /admin/auth/user/2/change/ HTTP/1.1" 200 26640
+[INFO] 2025-06-24 14:15:46,595 basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-06-24 14:15:51,909 basehttp - "POST /admin/auth/user/2/change/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 14:15:51,960 basehttp - "GET /admin/auth/user/ HTTP/1.1" 200 15519
+[INFO] 2025-06-24 14:15:51,969 basehttp - "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:15:51,971 basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-06-24 14:15:51,974 basehttp - "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[INFO] 2025-06-24 14:15:51,990 basehttp - "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:15:52,024 basehttp - "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:15:52,026 basehttp - "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+[INFO] 2025-06-24 14:15:52,033 basehttp - "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[INFO] 2025-06-24 14:16:03,902 basehttp - "GET /admin/ HTTP/1.1" 200 12398
+[INFO] 2025-06-24 14:16:04,959 basehttp - "GET /admin/ HTTP/1.1" 200 12398
+[INFO] 2025-06-24 14:16:07,232 basehttp - "GET /admin/auth/user/ HTTP/1.1" 200 15322
+[INFO] 2025-06-24 14:16:07,764 basehttp - "GET /admin/auth/user/2/change/ HTTP/1.1" 200 26504
+[INFO] 2025-06-24 14:16:23,733 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 14:16:24,925 basehttp - "GET / HTTP/1.1" 200 1257
+[INFO] 2025-06-24 14:16:26,607 basehttp - "GET /logout/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 14:16:26,609 basehttp - "GET / HTTP/1.1" 200 1032
+[INFO] 2025-06-24 14:16:27,610 basehttp - "GET /login/ HTTP/1.1" 200 1487
+[INFO] 2025-06-24 14:16:38,294 basehttp - "POST /login/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 14:16:38,308 basehttp - "GET /member/media/ HTTP/1.1" 200 1968
+[INFO] 2025-06-24 14:16:50,998 basehttp - "GET /member/media/ HTTP/1.1" 200 1968
+[INFO] 2025-06-24 14:16:53,499 basehttp - "GET /logout/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 14:16:53,501 basehttp - "GET / HTTP/1.1" 200 1032
+[INFO] 2025-06-24 14:22:27,603 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 14:22:28,690 basehttp - "GET / HTTP/1.1" 200 1032
+[ERROR] 2025-06-24 14:22:31,460 log - Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\medialibrary\views.py", line 41, in custom_login
+    return render(request, 'registration/login.html', {'form': form})
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FlowUp\OneDrive\Desktop\medialibrary\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+[ERROR] 2025-06-24 14:22:31,463 basehttp - "GET /login/ HTTP/1.1" 500 130466
+[INFO] 2025-06-24 14:22:38,393 basehttp - "GET /login/ HTTP/1.1" 200 1487
+[INFO] 2025-06-24 14:23:14,877 basehttp - "POST /login/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 14:23:14,883 basehttp - "GET /member/media/ HTTP/1.1" 200 1968
+[INFO] 2025-06-24 15:20:21,482 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-24 15:20:22,555 basehttp - "GET / HTTP/1.1" 200 1160
+[WARNING] 2025-06-24 15:20:22,614 log - Not Found: /favicon.ico
+[WARNING] 2025-06-24 15:20:22,615 basehttp - "GET /favicon.ico HTTP/1.1" 404 5930
+[INFO] 2025-06-24 15:20:36,975 basehttp - "GET /logout/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 15:20:36,977 basehttp - "GET / HTTP/1.1" 200 1032
+[INFO] 2025-06-24 15:20:40,927 basehttp - "GET /login/ HTTP/1.1" 200 1487
+[INFO] 2025-06-24 15:20:50,863 basehttp - "POST /login/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 15:20:50,878 basehttp - "GET /librarian/ HTTP/1.1" 200 1803
+[INFO] 2025-06-24 15:21:05,671 basehttp - "GET /librarian/loans/ HTTP/1.1" 200 5311
+[INFO] 2025-06-24 15:21:16,213 basehttp - "GET /librarian/loans/create/ HTTP/1.1" 200 1847
+[INFO] 2025-06-24 15:21:21,715 basehttp - "GET /librarian/loans/ HTTP/1.1" 200 5311
+[INFO] 2025-06-24 15:21:28,066 basehttp - "GET /member/media/ HTTP/1.1" 200 2054
+[INFO] 2025-06-24 15:21:41,034 basehttp - "GET /logout/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 15:21:41,036 basehttp - "GET / HTTP/1.1" 200 1032
+[INFO] 2025-06-24 15:21:41,903 basehttp - "GET /login/ HTTP/1.1" 200 1487
+[INFO] 2025-06-24 15:21:44,515 basehttp - "POST /login/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 15:21:44,521 basehttp - "GET /member/media/ HTTP/1.1" 200 1968
+[INFO] 2025-06-24 15:22:05,889 basehttp - "GET /logout/ HTTP/1.1" 302 0
+[INFO] 2025-06-24 15:22:05,891 basehttp - "GET / HTTP/1.1" 200 1032
+[INFO] 2025-06-24 15:22:08,719 basehttp - "GET /member/media/ HTTP/1.1" 302 0
+[WARNING] 2025-06-24 15:22:08,733 log - Not Found: /connexion/
+[WARNING] 2025-06-24 15:22:08,733 basehttp - "GET /connexion/?next=/member/media/ HTTP/1.1" 404 5947
+[WARNING] 2025-06-26 15:08:46,813 log - Not Found: /connexion/
+[INFO] 2025-06-26 15:18:27,799 autoreload - Watching for file changes with StatReloader
+[INFO] 2025-06-26 15:18:29,668 basehttp - "GET / HTTP/1.1" 200 1032
+[WARNING] 2025-06-26 15:18:29,762 log - Not Found: /favicon.ico
+[WARNING] 2025-06-26 15:18:29,763 basehttp - "GET /favicon.ico HTTP/1.1" 404 5930
+[INFO] 2025-06-26 15:18:31,492 basehttp - "GET /login/ HTTP/1.1" 200 1487
+[INFO] 2025-06-26 15:18:32,854 basehttp - "POST /login/ HTTP/1.1" 302 0
+[INFO] 2025-06-26 15:18:32,862 basehttp - "GET /member/media/ HTTP/1.1" 200 1968
+[INFO] 2025-06-26 15:18:34,794 basehttp - "GET /logout/ HTTP/1.1" 302 0
+[INFO] 2025-06-26 15:18:34,796 basehttp - "GET / HTTP/1.1" 200 1032
+[INFO] 2025-06-26 15:18:35,682 basehttp - "GET /login/ HTTP/1.1" 200 1487
+[INFO] 2025-06-26 15:18:38,640 basehttp - "POST /login/ HTTP/1.1" 302 0
+[INFO] 2025-06-26 15:18:38,653 basehttp - "GET /librarian/ HTTP/1.1" 200 1803

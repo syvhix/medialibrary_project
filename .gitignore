@@ -13,9 +13,6 @@ ENV/
 *.sublime-project
 *.sublime-workspace
 
-# Fichiers de logs
-*.log
-
 # Secrets et fichiers sensibles
 *.env
 .env
